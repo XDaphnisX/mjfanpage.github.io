@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tributo a Michael Jackson</title>
+    <style>
+        /* Estilos CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: url('https://static.posters.cz/image/750/6665.jpg') no-repeat center center/cover;
+            height: 300px;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+
+        header .header-content {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: gold;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: violet;
+        }
+
+        /* Barra de navegación debajo del header */
+        nav {
+            background-color: #111;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: inline-flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: gold;
+            color: black;
+        }
+
+        /* Mensaje de bienvenida */
+        .bienvenida {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.5rem;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .bienvenida h2 {
+            color: gold;
+        }
+
+        /* Sección de la imagen */
+        .imagen-bienvenida {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .imagen-bienvenida img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Secciones de contenido */
+        .section {
+            padding: 20px;
+            margin: 10px;
+            background-color: #222;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        footer .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        button {
+            background-color: gold;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            color: black;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: violet;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        #zona-registro button {
+            margin: 5px;
+        }
+
+        #reproductor-musica iframe {
+            width: 100%;
+            height: 315px;
+        }
+
+        /* Ocultar secciones al inicio */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="header-content">
+        <h1>Michael Jackson</h1>
+        <p>El Rey del Pop</p>
+    </div>
+</header>
+
+<!-- Mensaje de Bienvenida -->
+<div class="bienvenida">
+    <h2>¡Bienvenidos al tributo más completo a Michael Jackson!</h2>
+    <p>Explora su legado, su música, sus discos y participa en nuestro foro de fans.</p>
+</div>
+
+<!-- Imagen de bienvenida -->
+<div class="imagen-bienvenida">
+    <img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/1219D/production/_103214147_gettyimages-88688373.jpg.webp" alt="Michael Jackson">
+</div>
+
+<!-- Barra de Navegación -->
+<nav>
+    <ul>
+        <li><a href="#biografia" onclick="mostrarSeccion('biografia')">Biografía</a></li>
+        <li><a href="#discografia" onclick="mostrarSeccion('discografia')">Discografía</a></li>
+        <li><a href="#musica" onclick="mostrarSeccion('musica')">Música</a></li>
+        <li><a href="#foro" onclick="mostrarSeccion('foro')">Foro</a></li>
+    </ul>
+</nav>
+
+<!-- Main Content -->
+<main>
+    <!-- Biografía Section -->
+    <section id="biografia" class="section hidden">
+        <h2>Biografía</h2>
+        <p>"Michael Joseph Jackson (Gary, Indiana, 29 de agosto de 1958-Los Ángeles, California, 25 de junio de 2009) fue un cantante, compositor, productor y bailarín estadounidense.Apodado como el «Rey del Pop», sus contribuciones y reconocimiento en la historia de la música y el baile durante más de cuatro décadas, así como su publicitada vida personal, lo convirtieron en una figura internacional en la cultura popular. Su música incluye una amplia acepción de géneros como el pop, rhythm and blues (soul y funk), rock, disco y dance, y es reconocido como el «artista musical más exitoso de todos los tiempos» por los Guinness World Records."</p>
+    </section>
+
+<!-- Discografía Section -->
+<section id="discografia" class="section hidden">
+  <h2>Discografía</h2>
+
+  <!-- Álbumes de estudio -->
+  <h3>🎙️ Álbumes de estudio</h3>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; text-align: center;">
+    <div>
+      <img src="https://upload.wikimedia.org/wikipedia/en/b/b2/Mj1971-got-to-be-there.jpg" alt="Got to Be There" style="width:100%; border-radius:10px;">
+      <p><strong>Got to Be There (1972)</strong></p>
+    </div>
+    <div>
+      <img src="https://upload.wikimedia.org/wikipedia/en/1/17/BenMichaelJackson.jpg" alt="Ben" style="width:100%; border-radius:10px;">
+      <p><strong>Ben (1972)</strong></p>
+    </div>
+    <div>
+      <img src="https://upload.wikimedia.org/wikipedia/en/1/19/Mjmusicandme.jpg" alt="Music & Me" style="width:100%; border-radius:10px;">
+      <p><strong>Music & Me (1973)</strong></p>
+    </div>
+    <div>
+      <img src="https://m.media-amazon.com/images/I/91bhYFCzGIL._UF894,1000_QL80_.jpg" alt="Forever Michael" style="width:100%; border-radius:10px;">
+      <p><strong>Forever, Michael (1975)</strong></p>
+    </div>
+    <div>
+      <img src="https://m.media-amazon.com/images/I/812EgYpATnL._UF894,1000_QL80_.jpg" alt="Off the Wall" style="width:100%; border-radius:10px;">
+      <p><strong>Off the Wall (1979)</strong></p>
+    </div>
+    <div>
+      <img src="https://m.media-amazon.com/images/I/81ogsUqshzL.jpg" alt="Thriller" style="width:100%; border-radius:10px;">
+      <p><strong>Thriller (1982)</strong></p>
+    </div>
+    <div>
+      <img src="https://m.media-amazon.com/images/I/61+RJP0uw2L._UF1000,1000_QL80_.jpg" alt="Bad" style="width:100%; border-radius:10px;">
+      <p><strong>Bad (1987)</strong></p>
+    </div>
+    <div>
+      <img src="https://m.media-amazon.com/images/I/91nQtLqPHGL._UF894,1000_QL80_.jpg" alt="Dangerous" style="width:100%; border-radius:10px;">
+      <p><strong>Dangerous (1991)</strong></p>
+    </div>
+    <div>
+      <img src="https://m.media-amazon.com/images/I/81umHhwn+TL._AC_UF1000,1000_QL80_.jpg" alt="HIStory" style="width:100%; border-radius:10px;">
+      <p><strong>HIStory (1995)</strong><br><em>CD2: canciones nuevas</em></p>
+    </div>
+    <div>
+      <img src="https://m.media-amazon.com/images/I/71TXrGXF8TL._UF894,1000_QL80_.jpg" alt="Invincible" style="width:100%; border-radius:10px;">
+      <p><strong>Invincible (2001)</strong></p>
+    </div>
+  </div>
+
+  <!-- Álbumes póstumos -->
+  <h3 style="margin-top:40px;">💽 Álbumes póstumos</h3>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; text-align: center;">
+    <div>
+      <img src="https://m.media-amazon.com/images/I/71CT3oWpR6L._UF894,1000_QL80_.jpg" alt="Michael" style="width:100%; border-radius:10px;">
+      <p><strong>Michael (2010)</strong></p>
+    </div>
+    <div>
+      <img src="https://m.media-amazon.com/images/I/81+QQdnA3aL._UF894,1000_QL80_.jpg" alt="Xscape" style="width:100%; border-radius:10px;">
+      <p><strong>Xscape (2014)</strong></p>
+    </div>
+  </div>
+
+  <!-- Álbumes recopilatorios -->
+  <h3 style="margin-top:40px;">📀 Álbumes recopilatorios relevantes</h3>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; text-align: center;">
+    <div>
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/f6/e2/f9/f6e2f9be-af5e-7627-18fe-98e959727153/00602537386888.rgb.jpg/600x600bf-60.jpg" alt="Farewell My Summer Love" style="width:100%; border-radius:10px;">
+      <p><strong>Farewell My Summer Love (1984)</strong></p>
+    </div>
+    <div>
+      <img src="https://m.media-amazon.com/images/I/51lw19OPKJL._UF894,1000_QL80_.jpg" alt="Number Ones" style="width:100%; border-radius:10px;">
+      <p><strong>Number Ones (2003)</strong></p>
+    </div>
+    <div>
+      <img src="https://m.media-amazon.com/images/I/51mvvh2NDvL.jpg" alt="The Ultimate Collection" style="width:100%; border-radius:10px;">
+      <p><strong>The Ultimate Collection (2004)</strong></p>
+    </div>
+    <div>
+      <img src="https://m.media-amazon.com/images/I/81Rk+J3sq5L._AC_UF1000,1000_QL80_.jpg" alt="The Essential" style="width:100%; border-radius:10px;">
+      <p><strong>The Essential Michael Jackson (2005)</strong></p>
+    </div>
+    <div>
+      <img src="https://m.media-amazon.com/images/I/71uzslmN2BL._UF894,1000_QL80_.jpg" alt="This Is It" style="width:100%; border-radius:10px;">
+      <p><strong>This Is It (2009)</strong></p>
+    </div>
+    <div>
+      <img src="https://m.media-amazon.com/images/I/81gMEAyhbIL.jpg" alt="Scream" style="width:100%; border-radius:10px;">
+      <p><strong>Scream (2017)</strong></p>
+    </div>
+  </div>
+
+  <!-- Bandas sonoras y colaboraciones -->
+  <h3 style="margin-top:40px;">📼 Bandas sonoras y colaboraciones destacadas</h3>
+  <ul>
+    <li><strong>E.T. the Extra-Terrestrial</strong> (1982) – Narración + “Someone in the Dark”</li>
+    <li><strong>Free Willy</strong> (1993) – “Will You Be There” como tema principal</li>
+    <li><strong>The Wiz</strong> (1978) – Musical en cine como el Espantapájaros</li>
+  </ul>
+</section>
+
+<!-- Sección de Música -->
+<section id="musica" class="section hidden">
+  <h2>🎧 Escucha su música</h2>
+  <p>Disfruta de los grandes éxitos de Michael Jackson directamente desde la playlist oficial en YouTube.</p>
+  <a href="https://www.youtube.com/watch?v=Zi_XLOBDo_Y&list=RDEMe12_MlgO8mGFdeeftZ2nOQ" target="_blank" style="display:inline-block; text-decoration:none;">
+    <img src="https://img.youtube.com/vi/Zi_XLOBDo_Y/maxresdefault.jpg" alt="Playlist Michael Jackson" style="width:100%; max-width:600px; border-radius:12px; box-shadow:0 0 15px rgba(0,0,0,0.2);">
+    <p style="text-align:center; margin-top:8px; font-weight:bold;">▶ Ver Playlist en YouTube</p>
+  </a>
+</section>
+
+    <!-- Foro Section -->
+    <section id="foro" class="section hidden">
+        <h2>Foro de Fans</h2>
+        <form id="formulario-foro">
+            <input type="text" id="nombreUsuario" placeholder="Tu nombre" required />
+            <textarea name="comentario" placeholder="Escribe tu mensaje..." required></textarea>
+            <button type="submit">Publicar</button>
+        </form>
+        <div id="mensajes-foro"></div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <p>&copy; 2025 Tributo a Michael Jackson todos los derechos reservados a "MJJ Music. Powered by Sony Music Entertainment"</p>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+    // Función para cambiar de sección
+    function mostrarSeccion(seccion) {
+        const secciones = document.querySelectorAll('.section');
+        secciones.forEach((sec) => {
+            sec.classList.add('hidden');
+        });
+        const seccionVisible = document.getElementById(seccion);
+        seccionVisible.classList.remove('hidden');
+    }
+
+    // Reproducir el video de YouTube
+    function playVideo(videoId) {
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        iframe.width = "560";
+        iframe.height = "315";
+        const reproductor = document.getElementById('reproductor-musica');
+        reproductor.innerHTML = "";
+        reproductor.appendChild(iframe);
+    }
+
+    // Funcionalidad para el foro
+    document.getElementById('formulario-foro').addEventListener('submit', (event) => {
+        event.preventDefault();
+        const nombre = document.getElementById('nombreUsuario').value;
+        const comentario = event.target.comentario.value;
+        const mensajeDiv = document.createElement('div');
+        mensajeDiv.classList.add('mensaje');
+        mensajeDiv.innerHTML = `<strong>${nombre}:</strong> ${comentario}<br><button onclick="editarMensaje(this)">Editar</button><button onclick="eliminarMensaje(this)">Eliminar</button>`;
+        document.getElementById('mensajes-foro').appendChild(mensajeDiv);
+        event.target.reset();
+    });
+
+    function editarMensaje(button) {
+        const mensajeDiv = button.parentElement;
+        const nuevoComentario = prompt('Editar mensaje:', mensajeDiv.textContent.replace('EditarEliminar', '').trim());
+        if (nuevoComentario) {
+            mensajeDiv.innerHTML = `<strong>${mensajeDiv.querySelector('strong').textContent}:</strong> ${nuevoComentario}<br><button onclick="editarMensaje(this)">Editar</button><button onclick="eliminarMensaje(this)">Eliminar</button>`;
+        }
+    }
+
+    function eliminarMensaje(button) {
+        const mensajeDiv = button.parentElement;
+        mensajeDiv.remove();
+    }
+</script>
+
+</body>
+</html>
